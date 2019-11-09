@@ -2,6 +2,7 @@ spring:
   profiles:
     active: "development"
 service:
+  type: "simple"
   message:
     text: "hello"
 ---
@@ -14,5 +15,6 @@ service:
 spring:
   profiles: "production"
 service:
+  type: "advance"
   message:
     text: "welcome"
