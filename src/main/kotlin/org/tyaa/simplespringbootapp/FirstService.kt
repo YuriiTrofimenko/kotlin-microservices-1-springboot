@@ -7,9 +7,6 @@ import org.springframework.stereotype.Service
 class FirstService {
     @Value(value = "\${service.message.text}")
     private lateinit var text: String
-
-    @Value(value = "\${service.message.suffix}")
-    private lateinit var suffix: String
-
-    fun getHello(name : String) = "$text $name$suffix"
+    // Try: java -jar simple-springboot-app-0.0.1-SNAPSHOT.jar --spring.profiles.active="production"
+    fun getHello(name : String) = "$text $name"
 }
